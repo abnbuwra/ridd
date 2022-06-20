@@ -100,11 +100,11 @@ async def stop(client, m: Message):
         try:
             await call_py.leave_group_call(chat_id)
             clear_queue(chat_id)
-            await m.reply("✅ لك عاش ابشر تم الايقاف حب.")
+            await m.reply("✅ تم ايقافف جيك.")
         except Exception as e:
             await m.reply(f"🚫 **error:**\n\n`{e}`")
     else:
-        await m.reply("معݪش ، ماެفي شي مشتغݪ ياެعيني🌵.")
+        await m.reply("اوكي ‚ بس ماكو شي مشتغل 😕.")
 
 
 @Client.on_message(
@@ -196,7 +196,8 @@ async def cbpause(_, query: CallbackQuery):
         except Exception as e:
             await query.edit_message_text(f"🚫 **error:**\n\n`{e}`", reply_markup=bcl)
     else:
-        await query.answer("معݪش ، ماެفي شي مشتغݪ ياެعيني🌵.", show_alert=True)
+        await query.answer("اوكي ‚ بس ماكو شي مشتغل 😕.", show_alert=True)
+🌵.", show_alert=True)
 
 
 @Client.on_callback_query(filters.regex("cbresume"))
@@ -216,7 +217,7 @@ async def cbresume(_, query: CallbackQuery):
         except Exception as e:
             await query.edit_message_text(f"🚫 **error:**\n\n`{e}`", reply_markup=bcl)
     else:
-        await query.answer("معݪش ، ماެفي شي مشتغݪ ياެعيني🌵.", show_alert=True)
+        await query.answer("اوكي ‚ بس ماكو شي مشتغل 😕.", show_alert=True)
 
 
 @Client.on_callback_query(filters.regex("cbstop"))
@@ -235,7 +236,7 @@ async def cbstop(_, query: CallbackQuery):
         except Exception as e:
             await query.edit_message_text(f"🚫 **error:**\n\n`{e}`", reply_markup=bcl)
     else:
-        await query.answer("معݪش ، ماެفي شي مشتغݪ ياެعيني🌵.", show_alert=True)
+        await query.answer("اوكي ‚ بس ماكو شي مشتغل 😕.", show_alert=True)
 
 
 @Client.on_callback_query(filters.regex("cbmute"))
@@ -294,4 +295,4 @@ async def change_volume(client, m: Message):
         except Exception as e:
             await m.reply(f"🚫 **error:**\n\n`{e}`")
     else:
-        await m.reply("🐕‍🦺 **معݪش ، ماެفي شي مشتغݪ ياެعيني🌵. **")
+        await m.reply("🐕‍🦺 ** اوكي ‚ بس ماكو شي مشتغل 😕. **")
