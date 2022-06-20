@@ -39,7 +39,7 @@ ZAID_IMGS = [
     "Process/ImageFont/Lightred.png",
     "Process/ImageFont/Purple.png",
     "Process/ImageFont/foreground.png",
-]
+]ImageFont
 
 def ytsearch(query: str):
     try:
@@ -224,7 +224,7 @@ async def play(c: Client, m: Message):
                 await suhu.delete()
                 await m.reply_photo(
                     photo=f"{IMG_1}",
-                    caption=f"❤️‍🔥 → **أبشر يخوي حشغلها بعد هاذي »** `{pos}`\n\n❤️‍🔥 → **الاسم:** [{songname}]({link}) | `الاغنية`\n❤️‍🔥 → **الدردشة:** `{chat_id}`\n❤️‍🔥 → **طلب الحلو:** {m.from_user.mention()}",
+                    caption=f"❤️‍🔥 → **تمام بس خلي تخلص هاي واشغل  »** `{pos}`\n\n❤️‍🔥 → **الاسم:** [{songname}]({link}) | `الاغنية`\n❤️‍🔥 → **الدردشة:** `{chat_id}`\n❤️‍🔥 → **طلب الحلو:** {m.from_user.mention()}",
                     reply_markup=keyboard,
                 )
             else:
@@ -293,7 +293,7 @@ async def play(c: Client, m: Message):
                         )
                         await m.reply_photo(
                             photo=image,
-                            caption=f"👍🏻🔥 **أبشر عيني راح اشغلها بعد هاي »** `{pos}`\n\n❤️‍🔥→  **الاسم:** [{songname[:22]}]({url}) | `الاغنية`\n**❤️‍🔥 → المدة:** `{duration}`\n❤️‍🔥 → **طلب من الحب مالي:** {requester}",
+                            caption=f"👍🏻🔥 **تمام بس خلي تخلص هاي واشغل  »** `{pos}`\n\n❤️‍🔥→  **الاسم:** [{songname[:22]}]({url}) | `الاغنية`\n**❤️‍🔥 → المدة:** `{duration}`\n❤️‍🔥 → **طلب من الحب مالي:** {requester}",
                             reply_markup=keyboard,
                         )
                     else:
@@ -313,7 +313,7 @@ async def play(c: Client, m: Message):
                             requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                             await m.reply_photo(
                                 photo=image,
-                                caption=f"❤️‍🔥 **→ الاسم :** [{songname[:22]}]({url})\n**❤️‍🔥 → المدة:** `{duration}`\n❤️‍🔥 →** طلب من الگي:** {requester}",
+                                caption=f"❤️‍🔥 **→ الاسم :** [{songname[:22]}]({url})\n**❤️‍🔥 → المدة:** `{duration}`\n❤️‍🔥 →** طلب من:** {requester}",
                                 reply_markup=keyboard,
                             )
                         except Exception as ep:
